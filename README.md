@@ -1,4 +1,4 @@
-# Harshhaa Vardhan Reddy - DevOps Engineer CV Portfolio
+# Jatin Sharma - DevOps Engineer CV Portfolio
 
 A modern, performant, and accessible CV/portfolio website built with Next.js 14, TypeScript, and Tailwind CSS.
 
