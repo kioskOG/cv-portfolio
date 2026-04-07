@@ -134,7 +134,7 @@
 		}
 		
 		/* Hide non-essential elements */
-		.print\\:hidden,
+		.print\:hidden,
 		[class*="print:hidden"] {
 			display: none !important;
 		}

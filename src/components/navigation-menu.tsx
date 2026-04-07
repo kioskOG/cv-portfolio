@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { cn } from '@/lib/utils'
-import { MenuIcon, XIcon, FileTextIcon, UserIcon, BriefcaseIcon, GraduationCapIcon, CodeIcon, FolderKanbanIcon } from 'lucide-react'
+import { MenuIcon, XIcon, TerminalIcon, UserIcon, BriefcaseIcon, GraduationCapIcon, CodeIcon, FolderKanbanIcon } from 'lucide-react'
 
 const sections = [
 	{ id: 'about', label: 'About', icon: UserIcon },
@@ -147,7 +147,7 @@ export function NavigationMenu() {
 				<div className='flex items-center gap-4 rounded-full border border-border bg-background/95 backdrop-blur-xl px-5 py-2.5 shadow-2xl'>
 					<div className='flex items-center gap-2.5 px-3 py-1.5'>
 						<div className='flex items-center justify-center size-7 rounded-lg bg-primary text-primary-foreground shadow-sm'>
-							<FileTextIcon className='size-4' />
+							<TerminalIcon className='size-4' />
 						</div>
 						<div className='flex items-baseline gap-1.5'>
 							<span className='text-sm font-bold tracking-tight'>CV</span>
