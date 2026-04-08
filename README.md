@@ -346,7 +346,7 @@ The site is optimized for deployment on Vercel:
 3. Environment variables are automatically handled
 4. Analytics and Speed Insights are automatically enabled
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/NotHarshhaa/cv-portfolio)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/kioskOG/cv-portfolio)
 
 ---
 

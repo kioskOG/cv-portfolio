@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-# Sitemap: https://notharshhaa.site/sitemap.xml
+Sitemap: https://portfolio.jatinog.com/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1

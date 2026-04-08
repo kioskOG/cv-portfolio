@@ -76,7 +76,7 @@ export default function Page() {
 					</div>
 
 					<a 
-						href='https://github.com/NotHarshhaa' 
+						href='https://github.com/kioskOG'
 						target='_blank' 
 						rel='noopener noreferrer' 
 						className='group focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-full'
