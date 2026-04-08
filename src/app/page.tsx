@@ -134,6 +134,11 @@ export default function Page() {
 					<SkillsCategorized skills={data.skills} />
 				</Section>
 
+				<Section id='projects' className='print-force-new-page scroll-mb-16 scroll-mt-28 md:scroll-mt-32 animate-fade-in'>
+					<h2 className='text-xl font-bold mb-4'>Projects</h2>
+					<ProjectsSection projects={data.projects} />
+				</Section>
+
 				<Section id='impact' className='scroll-mt-28 md:scroll-mt-32 animate-fade-in'>
 					<h2 className='text-xl font-bold mb-6'>Impact</h2>
 
@@ -143,11 +148,7 @@ export default function Page() {
 						certifications={RESUME_DATA.certifications}
 					/>
 				</Section>
-
-				<Section id='projects' className='print-force-new-page scroll-mb-16 scroll-mt-28 md:scroll-mt-32 animate-fade-in'>
-					<h2 className='text-xl font-bold mb-4'>Projects</h2>
-					<ProjectsSection projects={data.projects} />
-				</Section>
+				
 			</section>
 
 			<CommandMenu
