@@ -49,49 +49,59 @@ export default function Page() {
 			/>
 			<NavigationMenu />
 			<main id='main-content' className='container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16 pt-28 md:pt-32'>
-				<section className='mx-auto w-full max-w-4xl space-y-8 bg-background text-foreground print:space-y-6'>
-				<div className='flex flex-col-reverse items-center gap-4 sm:flex-row sm:justify-between animate-fade-in'>
-					<div className='flex-1 space-y-3 text-center sm:text-left'>
-						<h1 className='text-4xl font-bold tracking-tight sm:text-5xl'>{data.name}</h1>
-						<p className='w-full text-pretty font-mono text-base text-muted-foreground md:w-4/5'>
-							{data.about}
-						</p>
-						<div className='flex items-center justify-center gap-x-2 font-mono text-sm text-muted-foreground sm:justify-start'>
-							<a
-								className='inline-flex items-center gap-x-1.5 hover:text-foreground hover:underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded transition-colors'
-								href={data.locationLink}
-								target='_blank'
-								rel='noreferrer'
-								aria-label={`View ${data.location} on Google Maps`}
-							>
-								<GlobeIcon className='size-4' aria-hidden="true" />
-								{data.location}
-							</a>
-						</div>
-
-						<div className='flex flex-wrap justify-center gap-2 pt-1 sm:justify-start'>
-							<MemoizedButtonLink data={data} />
-							<DownloadResumeButton />
-						</div>
+				<section className='mx-auto w-full max-w-4xl space-y-10 text-foreground print:space-y-6'>
+				<div className='flex flex-col-reverse items-center gap-6 sm:flex-row sm:justify-between animate-fade-in'>
+				<div className='flex-1 space-y-4 text-center sm:text-left'>
+					<div className='inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-medium border border-primary/20'>
+						<span className='relative flex h-2 w-2'>
+							<span className='animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75' />
+							<span className='relative inline-flex rounded-full h-2 w-2 bg-green-500' />
+						</span>
+						Available for opportunities
+					</div>
+					<h1 className='text-4xl font-bold tracking-tight sm:text-5xl text-gradient'>{data.name}</h1>
+					<p className='w-full text-pretty font-mono text-base text-muted-foreground md:w-4/5'>
+						{data.about}
+					</p>
+					<div className='flex items-center justify-center gap-x-2 font-mono text-sm text-muted-foreground sm:justify-start'>
+						<a
+							className='inline-flex items-center gap-x-1.5 hover:text-foreground hover:underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded transition-colors'
+							href={data.locationLink}
+							target='_blank'
+							rel='noreferrer'
+							aria-label={`View ${data.location} on Google Maps`}
+						>
+							<GlobeIcon className='size-4' aria-hidden="true" />
+							{data.location}
+						</a>
 					</div>
 
-					<a 
-						href='https://github.com/kioskOG'
-						target='_blank' 
-						rel='noopener noreferrer' 
-						className='group focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-full'
-						aria-label="Visit GitHub profile"
-					>
-						<Avatar className='size-32 border-2 border-border transition-all duration-300 group-hover:scale-105 sm:size-40 shadow-lg' active status="online">
-							<AvatarImage src={RESUME_DATA.avatar} alt={RESUME_DATA.name} className='object-cover' />
-							<AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
-						</Avatar>
-					</a>
+					<div className='flex flex-wrap justify-center gap-2 pt-1 sm:justify-start'>
+						<MemoizedButtonLink data={data} />
+						<DownloadResumeButton />
+					</div>
 				</div>
+
+				<a 
+					href='https://github.com/kioskOG'
+					target='_blank' 
+					rel='noopener noreferrer' 
+					className='group focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-full'
+					aria-label="Visit GitHub profile"
+				>
+					<Avatar className='size-32 border-2 border-primary/30 transition-all duration-300 group-hover:scale-105 sm:size-40 glow-ring' active status="online">
+						<AvatarImage src={RESUME_DATA.avatar} alt={RESUME_DATA.name} className='object-cover' />
+						<AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
+					</Avatar>
+				</a>
+			</div>
 
 				<Section id='about' className='scroll-mt-28 md:scroll-mt-32 animate-fade-in'>
 					<div className='flex items-center justify-between mb-4'>
-						<h2 className='text-xl font-bold'>About</h2>
+						<div>
+							<h2 className='text-xl font-bold'>About</h2>
+							<div className='h-0.5 w-8 bg-gradient-to-r from-primary to-primary/30 rounded-full mt-1' />
+						</div>
 						<CopyButton text={data.contact.email.at} label='email' className='print:hidden' />
 					</div>
 					<p className='text-pretty font-mono text-sm text-muted-foreground mb-6'>{data.summary}</p>
@@ -99,12 +109,18 @@ export default function Page() {
 				</Section>
 
 				<Section id='work' className='scroll-mt-28 md:scroll-mt-32 animate-fade-in'>
-					<h2 className='text-xl font-bold mb-6'>Work Experience</h2>
+					<div className='mb-6'>
+						<h2 className='text-xl font-bold'>Work Experience</h2>
+						<div className='h-0.5 w-8 bg-gradient-to-r from-primary to-primary/30 rounded-full mt-1' />
+					</div>
 					<WorkTimeline work={data.work} />
 				</Section>
 
 				<Section id='education' className='scroll-mt-28 md:scroll-mt-32 animate-fade-in'>
-					<h2 className='text-xl font-bold'>Education</h2>
+					<div className='mb-4'>
+						<h2 className='text-xl font-bold'>Education</h2>
+						<div className='h-0.5 w-8 bg-gradient-to-r from-primary to-primary/30 rounded-full mt-1' />
+					</div>
 					{data.education.map((education) => (
 						<Card key={education.school} className='transition-all duration-300 hover:shadow-lg hover:border-primary/20 animate-fade-in'>
 							<CardHeader>
@@ -130,17 +146,26 @@ export default function Page() {
 				</Section>
 
 				<Section id='skills' className='scroll-mt-28 md:scroll-mt-32 animate-fade-in'>
-					<h2 className='text-xl font-bold mb-4'>Skills</h2>
+					<div className='mb-4'>
+						<h2 className='text-xl font-bold'>Skills</h2>
+						<div className='h-0.5 w-8 bg-gradient-to-r from-primary to-primary/30 rounded-full mt-1' />
+					</div>
 					<SkillsCategorized skills={data.skills} />
 				</Section>
 
 				<Section id='projects' className='print-force-new-page scroll-mb-16 scroll-mt-28 md:scroll-mt-32 animate-fade-in'>
-					<h2 className='text-xl font-bold mb-4'>Projects</h2>
+					<div className='mb-4'>
+						<h2 className='text-xl font-bold'>Projects</h2>
+						<div className='h-0.5 w-8 bg-gradient-to-r from-primary to-primary/30 rounded-full mt-1' />
+					</div>
 					<ProjectsSection projects={data.projects} />
 				</Section>
 
 				<Section id='impact' className='scroll-mt-28 md:scroll-mt-32 animate-fade-in'>
-					<h2 className='text-xl font-bold mb-6'>Impact</h2>
+					<div className='mb-6'>
+						<h2 className='text-xl font-bold'>Impact</h2>
+						<div className='h-0.5 w-8 bg-gradient-to-r from-primary to-primary/30 rounded-full mt-1' />
+					</div>
 
 					<VolunteeringAwardsSection
 						volunteering={RESUME_DATA.volunteering}
@@ -164,6 +189,10 @@ export default function Page() {
 					{
 						url: `tel:${data.contact.tel.phoneNumber}`,
 						title: data.contact.tel.name
+					},
+					{
+						url: data.contact.blog.url,
+						title: data.contact.blog.name
 					},
 					...data.contact.social.map((socialMediaLink) => ({
 						url: socialMediaLink.url,

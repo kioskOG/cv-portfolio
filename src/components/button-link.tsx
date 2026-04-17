@@ -1,4 +1,4 @@
-import { MailIcon, PhoneIcon, AppWindowIcon, LinkIcon } from 'lucide-react'
+import { MailIcon, PhoneIcon, AppWindowIcon, LinkIcon, NewspaperIcon } from 'lucide-react'
 import { Tooltip, TooltipContent, TooltipTrigger } from './ui/tooltip'
 import { Button } from './ui/button'
 import { type ResumeData } from '@/types'
@@ -19,6 +19,11 @@ export function ButtonLink({ data }: { data: ResumeData }) {
 			name: data.contact.tel.name,
 			url: `tel:${data.contact.tel.phoneNumber}`,
 			icon: PhoneIcon
+		},
+		{
+			name: data.contact.blog.name,
+			url: data.contact.blog.url,
+			icon: NewspaperIcon
 		},
 		{
 			name: data.contact.link.name,

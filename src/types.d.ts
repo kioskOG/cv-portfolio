@@ -23,6 +23,7 @@ export interface ContactInfo {
 	link: ContactLink
 	email: ContactEmail
 	tel: ContactTel
+	blog: ContactLink
 	social: SocialLink[]
 }
 

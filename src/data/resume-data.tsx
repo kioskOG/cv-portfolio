@@ -28,6 +28,10 @@ export const RESUME_DATA = {
 			name: 'Phone',
 			phoneNumber: '+91xxxxxxxxxx'
 		},
+		blog: {
+			name: 'Blog',
+			url: 'https://blog.jatinog.com/'
+		},
 		social: [
 			{
 				name: 'GitHub',

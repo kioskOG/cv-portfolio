@@ -144,9 +144,9 @@ export function NavigationMenu() {
 		<>
 			{/* Desktop Navigation */}
 			<nav className='hidden md:flex fixed top-6 left-1/2 -translate-x-1/2 z-40 print:hidden'>
-				<div className='flex items-center gap-4 rounded-full border border-border bg-background/95 backdrop-blur-xl px-5 py-2.5 shadow-2xl'>
+				<div className='flex items-center gap-4 rounded-full border border-border/50 bg-background/80 backdrop-blur-xl px-5 py-2.5 shadow-lg shadow-black/5'>
 					<div className='flex items-center gap-2.5 px-3 py-1.5'>
-						<div className='flex items-center justify-center size-7 rounded-lg bg-primary text-primary-foreground shadow-sm'>
+						<div className='flex items-center justify-center size-7 rounded-lg bg-gradient-to-br from-primary to-primary/70 text-primary-foreground shadow-sm'>
 							<TerminalIcon className='size-4' />
 						</div>
 						<div className='flex items-baseline gap-1.5'>
@@ -154,7 +154,7 @@ export function NavigationMenu() {
 							<span className='hidden lg:inline text-xs font-medium text-muted-foreground tracking-wide'>Portfolio</span>
 						</div>
 					</div>
-					<div className='h-6 w-px bg-border' />
+					<div className='h-6 w-px bg-border/50' />
 					<div className='flex gap-1'>
 						{sections.map((section) => (
 							<Button
@@ -165,8 +165,8 @@ export function NavigationMenu() {
 								className={cn(
 									'transition-all duration-200 rounded-full px-3.5',
 									activeSection === section.id
-										? 'bg-foreground text-background hover:bg-foreground/90 font-medium dark:bg-foreground dark:text-background'
-										: 'hover:bg-accent hover:text-accent-foreground text-foreground'
+										? 'bg-primary text-primary-foreground hover:bg-primary/90 font-medium shadow-sm shadow-primary/25'
+										: 'hover:bg-accent hover:text-accent-foreground text-muted-foreground hover:text-foreground'
 								)}
 							>
 								{section.label}
@@ -214,7 +214,7 @@ export function NavigationMenu() {
 											className={cn(
 												'w-full justify-start h-12 px-4 text-sm transition-all duration-200 rounded-xl group relative overflow-hidden',
 												activeSection === section.id
-													? 'bg-foreground text-background hover:bg-foreground/90 font-semibold shadow-md dark:bg-foreground dark:text-background'
+													? 'bg-primary text-primary-foreground hover:bg-primary/90 font-semibold shadow-md shadow-primary/25'
 													: 'hover:bg-accent/50 hover:text-accent-foreground text-foreground active:scale-[0.98] border border-transparent hover:border-border'
 											)}
 											onClick={() => scrollToSection(section.id)}
