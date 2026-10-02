@@ -4,6 +4,8 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+	// allowedDevOrigins: ['127.0.0.1', '192.168.0.12', 'localhost'],
+	allowedDevOrigins: ['*'],
 	images: {
 		formats: ['image/avif', 'image/webp'],
 		remotePatterns: [
