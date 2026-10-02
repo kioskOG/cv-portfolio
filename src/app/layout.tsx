@@ -52,16 +52,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 		<html
 			lang='en'
 			suppressHydrationWarning
-			className={cn(GeistSans.variable, GeistMono.variable)}
+			className={cn(
+				GeistSans.variable, 
+				GeistMono.variable
+			)}
 		>
 			<body
 				className={cn(
-					'min-h-screen bg-background font-sans antialiased',
+					'min-h-screen bg-background font-sans antialiased transition-colors duration-500',
 					GeistSans.variable,
 					GeistMono.variable
 				)}
 			>
-				<ThemeProvider attribute="class" defaultTheme="system" enableSystem={true}>
+				<ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
 					<TooltipProvider>
 						{children}
 					</TooltipProvider>

@@ -62,12 +62,10 @@
 
 import React from 'react'
 import { Download } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 
 /**
  * DownloadResumeButton Component
- * Fixed the "Element type is invalid" error by providing both a named export 
- * (for your existing Page/File imports) and a default export named 'App' 
- * to satisfy the preview environment requirements.
  */
 export function DownloadResumeButton() {
     const handleDownload = () => {
@@ -86,15 +84,14 @@ export function DownloadResumeButton() {
     };
 
     return (
-        <div className="flex items-center justify-center p-12 bg-white dark:bg-zinc-950">
-            <button
-                onClick={handleDownload}
-                className="group flex items-center gap-2 px-6 py-2.5 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-zinc-100 rounded-lg font-medium text-sm transition-all hover:bg-zinc-50 dark:hover:bg-zinc-800 hover:scale-105 active:scale-95 shadow-sm"
-            >
-                <Download className="w-4 h-4 group-hover:animate-bounce text-blue-600 dark:text-blue-400" />
-                Download PDF Resume
-            </button>
-        </div>
+        <Button
+            onClick={handleDownload}
+            variant="outline"
+            className="group gap-2 transition-all duration-200 hover:scale-105"
+        >
+            <Download className="size-4 group-hover:animate-bounce" />
+            Download PDF Resume
+        </Button>
     )
 }
 

@@ -5,9 +5,9 @@ export const RESUME_DATA = {
 	initials: '',
 	location: 'Mahendragarh, India',
 	locationLink: 'https://www.google.com/maps/place/Kanina',
-	about: 
-	    'DevOps,MLOps & Cloud Engineer passionate about automation, scalability, Observability and building reliable infrastructure that empowers development teams.',
-    summary: `I specialize in DevOps, Cloud, Infrastructure Automation and MLops with hands-on expertise in tools like Kubernetes, Terraform, Ansible, Docker, CI/CD pipelines and Observability. I design and implement cloud-native architectures that are scalable, secure, and resilient with a strong focus on efficiency and reliability.
+	about:
+		'DevOps,MLOps & Cloud Engineer passionate about automation, scalability, Observability and building reliable infrastructure that empowers development teams.',
+	summary: `I specialize in DevOps, Cloud, Infrastructure Automation and MLops with hands-on expertise in tools like Kubernetes, Terraform, Ansible, Docker, CI/CD pipelines and Observability. I design and implement cloud-native architectures that are scalable, secure, and resilient with a strong focus on efficiency and reliability.
     As an open-source contributor, I actively collaborate with the global tech community, sharing solutions and tackling real-world challenges together.
     I'm driven by a mission to bridge development and operations through automation, helping teams ship faster, safer, and smarter in the cloud.`,
 	avatar: '/assets/avatar.png',
@@ -47,65 +47,69 @@ export const RESUME_DATA = {
 	},
 	education: [
 		{
-		  school: 'RPSGOI, Balana',
-		  degree: "Bachelor of Technology, Computer Science & Engineering",
-		  start: 'Jul, 2014',
-		  end: 'Jun, 2018',
-		  description: [
-			'Built a strong foundation in core engineering principles including Linux, Networking.',
-			'Explored interdisciplinary interests that led to a growing passion for automation and cloud infrastructure.',
-			'Worked on academic and practical projects involving design, analysis, and simulation of computer systems.',
-			'Participated in workshops and tech fests, developing early skills in problem-solving and teamwork.',
-			'This journey eventually sparked a shift toward DevOps, cloud computing, and open-source collaboration.'
-		  ]
+			school: 'RPSGOI, Balana',
+			degree: "Bachelor of Technology, Computer Science & Engineering",
+			start: 'Jul, 2014',
+			end: 'Jun, 2018',
+			description: [
+				'Built a strong foundation in core engineering principles including Linux, Networking.',
+				'Explored interdisciplinary interests that led to a growing passion for automation and cloud infrastructure.',
+				'Worked on academic and practical projects involving design, analysis, and simulation of computer systems.',
+				'Participated in workshops and tech fests, developing early skills in problem-solving and teamwork.',
+				'This journey eventually sparked a shift toward DevOps, cloud computing, and open-source collaboration.'
+			]
 		}
 	],
 	work: [
-    {
-      company: 'Opstree Solutions',
-      link: 'https://opstree.com/',
-      badges: ['Remote', 'Lead'],
-      jobs: [
-        {
-          title: 'Lead DevOps & MLOps Engineer',
-          start: 'April, 2021',
-          end: 'Present',
-          description: [
-            'Architected MLOps foundations using Python, DVC, and MLflow for secure data processing, reproducible training pipelines, and model lifecycle management.',
-            'Cars24 (Client): Executed migration of 200+ production services from AWS ECS to EKS, saving ~$20,000/month by replacing Datadog with a custom SigNoz observability stack.',
-            'Swiggy (Client): Managed 50+ AWS accounts using Terraform, ensuring 99.9% uptime during high-traffic national events like Diwali and New Year.',
-            'Nomupay (Client): Designed multi-account AWS structures with Terragrunt and migrated EKS networking to Cilium/Hubble for enhanced performance and security.',
-            'Barq Fintech (Client): Engineered resilient OKE (Oracle Kubernetes) environments, implementing Istio Service Mesh and Keycloak for centralized AuthN/AuthZ.',
-            'Drove innovation by creating a custom Cloud Map Kubernetes Controller and implementing Karpenter for intelligent EKS autoscaling.',
-            'Introduced Netbird VPN as the organizational standard.',
-			'Mentored 50+ engineers through the Ninja, Sanatak, and Ronin programs.',
-			'Designed and implemented production-ready MLOps pipelines using Python, scikit-learn, DVC, MLflow, and AWS S3 for reproducible model training and data versioning.'
-          ]
-        }
-      ]
-    },
-    {
-      company: 'NEXTEON Solutions',
-      link: 'https://www.nexteon.in/',
-      badges: ['On-Site'],
-      jobs: [
-        {
-          title: 'Jr. DevOps Engineer',
-          start: 'July, 2018',
-          end: 'April, 2021',
-          description: [
-            'Managed and monitored 100+ websites running on Adobe Experience Manager (AEM) across on-premise data centers (RSDC & BSDC).',
-            'Led the successful migration of Rajasthan Government websites and AEM (6.1) infrastructure between data centers in Jaipur.',
-            'Collaborated with cross-functional teams to resolve infrastructure bottlenecks and ensure high availability for mission-critical government services.',
-            'Automated routine deployment tasks, reducing manual intervention and minimizing release-window downtime.'
-          ]
-        }
-      ]
-    }
-],	  
+		{
+			company: 'Opstree Solutions',
+			link: 'https://opstree.com/',
+			badges: ['Remote', 'Lead'],
+			jobs: [
+				{
+					title: 'Lead DevOps & MLOps Engineer',
+					start: 'April, 2021',
+					end: 'Present',
+					description: [
+						'Architected MLOps foundations using Python, DVC, and MLflow for secure data processing, reproducible training pipelines, and model lifecycle management.',
+						'Cars24 (Client): Executed migration of 200+ production services from AWS ECS to EKS, saving ~$20,000/month by replacing Datadog with a custom SigNoz observability stack.',
+						'Swiggy (Client): Managed 50+ AWS accounts using Terraform, ensuring 99.9% uptime during high-traffic national events like Diwali and New Year.',
+						'Nomupay (Client): Engineered a robust Security Information and Event Management (SIEM) and Extended Detection and Response (XDR) solution using Wazuh for security monitoring and threat detection.',
+						'Nomupay (Client): Designed multi-account AWS structures with Terragrunt and migrated EKS networking to Cilium/Hubble for enhanced performance and security.',
+						'Nomupay (Client): Designed & Deployed AWS Elevator Tool for AWS resource management. Which will Provide temporary access for user required access with proper logs.',
+						'Nomupay (Client): Designed and implemented a secure SFTP UI solution that eliminated the need to distribute or manage SFTP credentials directly with developers.',
+						'Barq Fintech (Client): Engineered resilient OKE clusters, implementing Istio for service mesh, Keycloak for authentication, and Velero for backup.',
+						'Drove innovation by creating a custom Cloud Map Kubernetes Controller and implementing Karpenter for intelligent EKS autoscaling.',
+						'Introduced Netbird VPN as the organizational standard.',
+						'Mentored 50+ engineers through the Ninja, Sanatak, and Ronin programs.',
+						'Designed and implemented production-ready MLOps pipelines using Python, scikit-learn, DVC, MLflow, and AWS S3 for reproducible model training and data versioning.'
+					]
+				}
+			]
+		},
+		{
+			company: 'NEXTEON Solutions',
+			link: 'https://www.nexteon.in/',
+			badges: ['On-Site'],
+			jobs: [
+				{
+					title: 'Jr. DevOps Engineer',
+					start: 'July, 2018',
+					end: 'April, 2021',
+					description: [
+						'Managed and monitored 100+ websites running on Adobe Experience Manager (AEM) across on-premise data centers (RSDC & BSDC).',
+						'Led the successful migration of Rajasthan Government websites and AEM (6.1) infrastructure between data centers in Jaipur.',
+						'Collaborated with cross-functional teams to resolve infrastructure bottlenecks and ensure high availability for mission-critical government services.',
+						'Automated routine deployment tasks, reducing manual intervention and minimizing release-window downtime.'
+					]
+				}
+			]
+		}
+	],
 	skills: [
 		'AWS',
 		'GCP',
+		'Azure',
 		'OCI',
 		'S3',
 		'Route 53',
@@ -179,101 +183,141 @@ export const RESUME_DATA = {
 		"ML Pipeline",
 		"ML deployment (KServe, Kubernetes)",
 		"ML observability (Metrics, Logs, Performance monitoring)",
+		"NCA-AIIO",
+		"NVIDIA NIM",
+		"GPU Architectures (L40S, A100, H100, H200, GH200, Blackwell), NVLink, NVSwitch",
+		"Infiband",
+		"RDMA",
+		"NVIDIA BlueField DPUs",
+		"CUDA",
+		"cuDNN",
+		"NCCL",
+		"TensorRT",
+		"NVIDIA Triton Inference Server",
 	],
 	volunteering: [
-    {
-      role: "Trainer / Mentor",
-      organization: "Opstree Global",
-      start: "Sep 2025",
-      end: "Jan 2026",
-      description: "Designed and delivered a foundational training program titled 'Journey of a DevOps Engineer — From Day 1 to Serving a Million' for new engineers, covering real-world DevOps practices from setup to large-scale production systems.",
-    }
-    ],
+		{
+			role: "Trainer / Mentor",
+			organization: "Opstree Global",
+			start: "Sep 2025",
+			end: "Jan 2026",
+			description: "Designed and delivered a foundational training program titled 'Journey of a DevOps Engineer — From Day 1 to Serving a Million' for new engineers, covering real-world DevOps practices from setup to large-scale production systems.",
+		}
+	],
 	awards: [
-    {
-      title: "ECS to EKS Migration Excellence",
-      date: "May 2025",
-      description: "Successfully migrated 200+ services for client with near zero downtime.",
-    },
-    {
-      title: "Opstree Ninja/Ronin Mentor",
-      date: "April 2023",
-      description: "Recognized for providing high-impact training and mentorship in DevOps programs.",
-    },
-    {
-      title: "AEM Data Center Migration",
-      date: "Feb 2020",
-      description: "Successfully migrated all Rajasthan Govt Websites to a new Data Center.",
-    },
-	{
-      title: "Appreciation",
-      date: "",
-      description: "Reciedved appreciation multiple times from clients.",
-    }
-  ],
-  certifications: [
-    "RHCSA (RedHat)",
-	"RHCE (RedHat)",
-    "AWS Certified Solutions Architect – Associate",
-  ],
+		{
+			title: "ECS to EKS Migration Excellence",
+			date: "May 2025",
+			description: "Successfully migrated 200+ services for client with near zero downtime.",
+		},
+		{
+			title: "Opstree Ninja/Ronin Mentor",
+			date: "April 2023",
+			description: "Recognized for providing high-impact training and mentorship in DevOps programs.",
+		},
+		{
+			title: "AEM Data Center Migration",
+			date: "Feb 2020",
+			description: "Successfully migrated all Rajasthan Govt Websites to a new Data Center.",
+		},
+		{
+			title: "Appreciation",
+			date: "",
+			description: "Reciedved appreciation multiple times from clients.",
+		}
+	],
+	certifications: [
+		{
+			name: "RHCSA (RedHat)",
+			issuer: "Red Hat",
+			image: "https://upload.wikimedia.org/wikipedia/commons/d/d8/Red_Hat_logo.svg"
+		},
+		{
+			name: "RHCE (RedHat)",
+			issuer: "Red Hat",
+			image: "https://upload.wikimedia.org/wikipedia/commons/d/d8/Red_Hat_logo.svg"
+		},
+		{
+			name: "AWS Certified Solutions Architect – Associate",
+			issuer: "Amazon Web Services",
+			image: "https://images.credly.com/size/340x340/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png"
+		}
+	],
+	blogs: [
+		{
+			title: 'Automating Netbird Deployment with Docker',
+			description: 'Learn how to easily deploy a Netbird self-hosted VPN server using Docker and secure your multi-cloud environment.',
+			link: 'https://blog.jatinog.com/'
+		},
+		{
+			title: 'A Guide to Custom EKS Controllers',
+			description: 'How we built a custom Kubernetes controller to sync headless services directly with AWS Cloud Map.',
+			link: 'https://blog.jatinog.com/'
+		},
+		{
+			title: 'Deploying the LGTM Observability Stack',
+			description: 'A complete hands-on approach to monitoring your Kubernetes clusters with Prometheus, Grafana, Loki, Tempo, and Mimir.',
+			link: 'https://blog.jatinog.com/'
+		}
+	],
 	projects: [
 		{
-		  title: 'Netbird Deployment Automation',
-		  techStack: ['Docker', 'Kubernetes', 'Learning'],
-		  description: 'Self-hosted VPN server setup & multi-cloud links.',
-		  link: {
-			label: '',
-			href: 'https://kioskog.github.io/docs/devops/docker/Netbird/'
-		  },
-		  isNew: true
+			title: 'Netbird Deployment Automation',
+			techStack: ['Docker', 'Kubernetes', 'Learning'],
+			description: 'Self-hosted VPN server setup & multi-cloud links.',
+			link: {
+				label: '',
+				href: 'https://kioskog.github.io/docs/devops/docker/Netbird/'
+			},
+			isNew: true
 		},
 		{
-		  title: '🌐 CloudMap Controller for EKS',
-		  techStack: ['EKS', 'Cloudmap', 'ECS'],
-		  description: 'Sync headless Services to AWS Cloud Map/Route53 with TTLs & audit logs.',
-		  link: {
-			label: 'github.com/kioskOG/EKS-cloudmap-controller',
-			href: 'https://github.com/kioskOG/EKS-cloudmap-controller'
-		  },
-		  isNew: true
+			title: '🌐 CloudMap Controller for EKS',
+			techStack: ['EKS', 'Cloudmap', 'ECS'],
+			description: 'Sync headless Services to AWS Cloud Map/Route53 with TTLs & audit logs.',
+			link: {
+				label: 'github.com/kioskOG/EKS-cloudmap-controller',
+				href: 'https://github.com/kioskOG/EKS-cloudmap-controller'
+			},
+			isNew: true
 		},
 		{
-		  title: '🚀 LGTM Stack on Kubernetes — Complete Hands-On',
-		  techStack: ['Prometheus', 'Grafana', 'Loki', 'Tempo', 'Mimir', 'Pyroscope'],
-		  description: 'This project provides a ready-to-use advanced monitoring platform for DevOps engineers and beginners. With just one command, you get Prometheus, Grafana, Loki, Alertmanager, Node Exporter etc',
-		  link: {
-			label: 'github.com/kioskOG/observability-hub',
-			href: 'https://github.com/kioskOG/observability-hub'
-		  },
-		  isNew: true
+			title: '🚀 LGTM Stack on Kubernetes — Complete Hands-On',
+			techStack: ['Prometheus', 'Grafana', 'Loki', 'Tempo', 'Mimir', 'Pyroscope'],
+			description: 'This project provides a ready-to-use advanced monitoring platform for DevOps engineers and beginners. With just one command, you get Prometheus, Grafana, Loki, Alertmanager, Node Exporter etc',
+			link: {
+				label: 'github.com/kioskOG/observability-hub',
+				href: 'https://github.com/kioskOG/observability-hub'
+			},
+			isNew: true
 		},
 		{
-		  title: 'Netbird Management Utility',
-		  techStack: ['AWS', 'GCP', 'Cloud'],
-		  description: 'Menu-driven admin utility to manage Netbird resources.',
-		  link: {
-			label: '',
-			href: 'https://kioskog.github.io/docs/devops/python/netbird-python-utility/'
-		  },
-		  isNew: true
+			title: 'Netbird Management Utility',
+			techStack: ['AWS', 'GCP', 'Cloud'],
+			description: 'Menu-driven admin utility to manage Netbird resources.',
+			link: {
+				label: '',
+				href: 'https://kioskog.github.io/docs/devops/python/netbird-python-utility/'
+			},
+			isNew: true
 		},
 		{
-		  title: 'Amazon EKS Cluster with Terraform',
-		  techStack: ['Terraform', 'EKS'],
-		  description: 'Terraform-based provisioning of an Amazon EKS Cluster for Kubernetes deployments.',
-		  link: {
-			label: '',
-			href: ''
-		  }
+			title: 'Amazon EKS Cluster with Terraform',
+			techStack: ['Terraform', 'EKS'],
+			description: 'Terraform-based provisioning of an Amazon EKS Cluster for Kubernetes deployments.',
+			link: {
+				label: '',
+				href: ''
+			}
 		},
 		{
-		  title: 'CI/CD on EKS using GitHub Actions',
-		  techStack: ['CI/CD', 'EKS', 'GitHub Actions', 'Terraform'],
-		  description: 'CI/CD pipeline for deploying a Node.js app on Amazon EKS using GitHub Actions, Terraform, and Kubernetes.',
-		  link: {
-			label: '',
-			href: ''
-		  }
+			title: 'CI/CD on EKS using GitHub Actions',
+			techStack: ['CI/CD', 'EKS', 'GitHub Actions', 'Terraform'],
+			description: 'CI/CD pipeline for deploying a Node.js app on Amazon EKS using GitHub Actions, Terraform, and Kubernetes.',
+			link: {
+				label: '',
+				href: ''
+			}
 		},
 		// {
 		//   title: 'DevOps Tools Collection',
@@ -473,5 +517,5 @@ export const RESUME_DATA = {
 		// 	href: 'https://github.com/NotHarshhaa/into-the-devops'
 		//   }
 		// }
-	]			
+	]
 }

@@ -4,6 +4,7 @@ import { useEffect, useState, useRef } from 'react'
 import { Card, CardContent } from '@/components/ui/card'
 import { RESUME_DATA } from '@/data/resume-data'
 import { BriefcaseIcon, CodeIcon, AwardIcon, BuildingIcon } from 'lucide-react'
+import { cn } from '@/lib/utils'
 
 function AnimatedCounter({ target, suffix = '+' }: { target: number; suffix?: string }) {
 	const [count, setCount] = useState(0)
@@ -41,31 +42,35 @@ function AnimatedCounter({ target, suffix = '+' }: { target: number; suffix?: st
 	)
 }
 
-export function StatsSection() {
+interface StatsSectionProps {
+	mode?: 'modern' | 'westeros'
+}
+
+export function StatsSection({ mode = 'modern' }: StatsSectionProps) {
 	const stats = [
 		{
-			label: 'Years Experience',
+			label: mode === 'westeros' ? 'Winters of Reign' : 'Years Experience',
 			value: new Date().getFullYear() - 2018,
 			icon: BriefcaseIcon,
-			description: 'Professional experience'
+			description: mode === 'westeros' ? 'Serving the Realm' : 'Professional experience'
 		},
 		{
-			label: 'Projects',
+			label: mode === 'westeros' ? 'Dragons Hatched' : 'Projects',
 			value: RESUME_DATA.projects.length,
 			icon: CodeIcon,
-			description: 'Open source & personal'
+			description: mode === 'westeros' ? 'Open campaigns & scrolls' : 'Open source & personal'
 		},
 		{
-			label: 'Companies',
+			label: mode === 'westeros' ? 'Citadels Served' : 'Companies',
 			value: RESUME_DATA.work.length,
 			icon: BuildingIcon,
-			description: 'Worked with'
+			description: mode === 'westeros' ? 'Castles and Keeps' : 'Worked with'
 		},
 		{
-			label: 'Skills',
+			label: mode === 'westeros' ? 'Runes & Alchemy' : 'Skills',
 			value: RESUME_DATA.skills.length,
 			icon: AwardIcon,
-			description: 'Technologies mastered'
+			description: mode === 'westeros' ? 'Valyrian steel arts' : 'Technologies mastered'
 		}
 	]
 
@@ -74,14 +79,14 @@ export function StatsSection() {
 			{stats.map((stat, index) => {
 				const Icon = stat.icon
 				return (
-					<Card key={index} className='text-center group relative overflow-hidden transition-all duration-300 hover:shadow-lg hover:scale-[1.03]'>
+					<Card key={index} className='text-center group relative overflow-hidden border border-border bg-card text-card-foreground p-0 transition-all duration-300 hover:shadow-lg hover:scale-[1.03] dragon-glow-hover'>
 						<div className='absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500' />
 						<CardContent className='pt-6 pb-4 relative'>
 							<div className='inline-flex items-center justify-center size-10 rounded-xl bg-primary/10 mb-3 group-hover:bg-primary/15 transition-colors duration-300'>
 								<Icon className='size-5 text-primary' />
 							</div>
 							<AnimatedCounter target={stat.value} />
-							<div className='text-sm text-muted-foreground font-medium'>{stat.label}</div>
+							<div className={cn('text-sm text-muted-foreground font-medium', mode === 'westeros' && 'font-cinzel')}>{stat.label}</div>
 							<div className='text-xs text-muted-foreground/70 mt-1'>{stat.description}</div>
 						</CardContent>
 					</Card>

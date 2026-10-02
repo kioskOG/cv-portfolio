@@ -2,7 +2,7 @@
 
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { BriefcaseIcon } from 'lucide-react'
+import { BriefcaseIcon, Swords } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 interface Work {
@@ -19,9 +19,10 @@ interface Work {
 
 interface WorkTimelineProps {
 	work: Work[]
+	mode?: 'modern' | 'westeros'
 }
 
-export function WorkTimeline({ work }: WorkTimelineProps) {
+export function WorkTimeline({ work, mode = 'modern' }: WorkTimelineProps) {
 	return (
 		<div className='relative'>
 			{/* Timeline line */}
@@ -33,11 +34,15 @@ export function WorkTimeline({ work }: WorkTimelineProps) {
 						{/* Timeline dot */}
 						<div className='absolute left-0 top-2 md:left-4'>
 							<div className='size-8 rounded-full bg-background border-4 border-primary flex items-center justify-center'>
-								<BriefcaseIcon className='size-4 text-primary' />
+								{mode === 'westeros' ? (
+									<Swords className='size-4 text-primary' />
+								) : (
+									<BriefcaseIcon className='size-4 text-primary' />
+								)}
 							</div>
 						</div>
 
-						<Card className='transition-all duration-300 hover:shadow-lg hover:border-primary/20'>
+						<Card className='border border-border bg-card text-card-foreground shadow-sm transition-all duration-300 hover:shadow-lg hover:border-primary/20 hover:-translate-y-0.5 dragon-glow-hover'>
 							<CardHeader>
 								<h3 className='text-base inline-flex items-center gap-x-1 font-semibold leading-none'>
 									{workItem.link ? (
